@@ -1,0 +1,32 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: reggie-tout
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver # 使用 MySQL Connector/J 8.x 的驱动类名
+    url: jdbc:mysql://192.168.142.133:3306/reggie
+    username: root
+    password: 88888888
+    hikari:
+      connection-timeout: 30000
+
+  redis:
+    host: 192.168.142.133
+    port: 6379
+
+
+mybatis-plus:
+  type-aliases-package: com.example.reggietout.pojo
+  configuration:
+    #在映射实体或者属性时，将数据库中表名和字段名中的下划线去掉，按照驼峰命名法映射
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+  global-config:
+    db-config:
+      id-type: ASSIGN_ID
+
+
+basePath:
+  path: "D:\\Temp\\img"

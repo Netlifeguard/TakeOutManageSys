@@ -1,0 +1,19 @@
+package com.example.reggietout.dto;
+
+
+import com.example.reggietout.pojo.Dish;
+import com.example.reggietout.pojo.DishFlavor;
+import lombok.Data;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@Data
+public class DishDto extends Dish {
+
+    private List<DishFlavor> flavors = new ArrayList<>();
+
+    private String categoryName;
+
+    private Integer copies;
+}
